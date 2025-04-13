@@ -1,0 +1,69 @@
+/* General styling for the Recommendation section */
+.Recommendation {
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;  /* Centers content vertically */
+    min-height: 100vh;  /* Ensures that the section takes at least the full viewport height */
+}
+
+/* Container for the form */
+.container_r {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+    border: 2px solid #89000ecf;
+    width: 400px;  /* Fixed width for the form */
+    margin: 0 auto; /* This centers the container horizontally */
+}
+
+/* Heading style */
+.Recommendation h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Verdana,sans-serif;
+    color: #01346a;
+}
+
+/* Label style */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Input, select, and button styling */
+input, select, button {
+    width: 100%;  /* Full width for input, select, and button */
+    padding: 8px;
+    margin-bottom: 15px;  /* Space between elements */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Button style */
+#b3 {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;  /* Add padding to the button */
+    border-radius: 4px;  /* Rounded corners */
+    font-size: 14px;
+}
+
+#b3:hover {
+    background-color: #0056b3;  /* Darker shade of blue on hover */
+}
+
+/* Styling for result message */
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+}

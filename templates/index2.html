@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation System</title>
+    <link rel="stylesheet" href="../static/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/style2.css">
+ 
+    <link rel="shortcut icon" href="./images/plane.png" type="icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+</style>
+<script>
+    async function submitForm() {
+        // Collect data from the form
+        const state = document.getElementById('State').value;
+        const travelType = document.getElementById('Type').value;
+        const bestTime = document.getElementById('Time').value;
+        const popularity = document.getElementById('Popularity').value;
+
+        // Log the data for debugging
+        console.log('Sending data:', { state, type: travelType, time: bestTime, popularity });
+
+        try {
+            // Send the data to the Flask backend
+            const response = await fetch('/get_recommendation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ state, type: travelType, time: bestTime, popularity })
+            });
+
+            const data = await response.json();
+
+            // Check the response from the backend
+            console.log('Received response:', data);
+
+            // Check if the response contains the expected recommendation
+            if (data.recommendation) {
+                document.getElementById('result').innerText = `Recommended Place: ${data.recommendation}`;
+            } else {
+                document.getElementById('result').innerText = 'No recommendation found.';
+            }
+        } catch (error) {
+            console.error('Error during the request:', error);
+            document.getElementById('result').innerText = 'An error occurred. Please try again.';
+        }
+    }
+</script>
+       
+    </head>
+        
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+     
+           <h1 class="logo">Travel</h1>
+           <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Blog">Blog</a></li>
+                    <li><a href="#Recommendation">Recommendation</a></li>
+                </ul>
+                <div class="nav-icon">
+        
+                    <a href="https://www.flaticon.com/free-icons/home" title="home icons">
+                        <video width="65" height="65" autoplay loop muted>
+                            <source src="https://cdn-icons-mp4.flaticon.com/512/14204/14204926.mp4" type="video/mp4">
+                     
+                        </video>
+                    </a>
+                    
+                      
+                </div> 
+                
+        
+             
+        </div>
+   
+    </nav>
+    <br> <br> <br><br><br>
+    <!-- Home -->
+    <header class="Home" id="Home">
+        <div class="container">
+            <div class="home-txt">
+                <h2>Travel Recommendation <br>
+                    System</h2>
+                <p>Live life with no excuses, travel with no regret <br>
+                    Let us decide your new Journey :)</p>
+                <!-- Separate button container for better control -->
+                <div class="button-container">
+                    <a href="#"><button id="b1">Contact us</button></a>
+                    <a href="#"><button id="b2">Recommend a travel</button></a>
+                </div>
+            </div>
+            <div class="homephoto">
+                <img src="../static/images/rb_2148276358.png" alt="earth">
+            </div>
+        </div>
+    </header>
+    
+
+<section>
+<div class="header" id="About">
+    <br><br><br><br><br>
+    <h1>About Us</h1>
+    <p>Your Travel Experience, Perfectly Personalized</p>
+</div>
+
+<div class="container">
+    <section class="about-section">
+        <div class="about-text">
+            <h2>Welcome to Our Travel Agency</h2>
+            <p>We are a travel agency based in Egypt, dedicated to creating unforgettable travel experiences for our clients. Our travel recommendation system is designed to understand your preferences and suggest the best destinations for your next adventure.</p>
+            <p>Whether you love beaches, historical landmarks, or bustling cities, we use your travel history and preferences to guide you to your dream destinations.</p>
+            <p>Let us know what you love about traveling, and together, we'll make every trip extraordinary!</p>
+        </div>
+        <div class="about-image">
+            <img src="../static/images/Dodge Monaco Images  3 Secrets You Will Not Want To Know About Dodge Monaco Images - AH – STUDIO Blog.jpg" alt="Travel">
+        </div>
+    </section>
+</div>
+</section>
+<br><br> <br><br>
+<div class="blog" id="Blog">
+    
+<section class="recommendation-section">
+   
+    <h2>Top Global Destinations</h2>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="../static/images/Premium Photo _ View of Paris, France.jpg" alt="Paris">
+            <p>Paris</p>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/images/Colour Slides of London, October 1978 - Flashbak.jpg" alt="London">
+            <p>London</p>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/images/New York City, My Love.jpg" alt="New York City">
+            <p>New York City</p>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/images/Premium Photo _ View of the Colosseo Romano (Roman Coliseum) in Roma, Lazio, Italy_.jpg" alt="Rome">
+            <p>Rome</p>
+        </div>
+    </div>
+
+    <h2>Top Experiences Worldwide</h2>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="../static/images/dbfe1cb8-7728-45e0-acca-b79ecacaf06c.jpg "alt="Milford Sound Scenic Cruise">
+            <p>2-Hour Milford Sound Scenic Cruise</p>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/images/The Grand Canyon.jpg" alt="Grand Canyon">
+            <p>Grand Canyon West & Hoover Dam</p>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/images/Amsterdam Light Festival.jpg" alt="Amsterdam Light Festival">
+            <p>Amsterdam Light Festival Cruise</p>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/images/Chichen Itza, Mexico.jpg" alt="Chichen Itza Cenote">
+            <p>Chichen Itza & Cenote Tour</p>
+        </div>
+    </div>
+
+</section>
+</div>
+<br><br><br><br>
+
+<section class="Recommendation" id="Recommendation">
+    <div class="container">
+    
+    <h2>Recommendation</h2>
+    <div class="container_r">
+      
+        <h3>Select Your desired options:</h3>
+        <form id="travelForm">
+            <label for="state">State</label>
+            <select id="State" name="State" required>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Goa">Goa</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            </select>
+
+            <label for="Type">Type of Travel</label>
+            <select id="Type" name="Type" required>
+                <option value="Adventure">Adventure</option>
+                <option value="Beach">Beach</option>
+                <option value="City">City</option>
+                <option value="Nature">Nature</option>
+                <option value="Historical">Historical</option>
+            </select>
+
+            <label for="Time">Best Time to Visit</label>
+            <select id="Time" name="Time" required>
+                <option value="Nov-Feb">Nov-Feb</option>
+                <option value="Nov-Mar">Nov-Mar</option>
+                <option value="Oct-Mar">Oct-Mar</option>
+                <option value="Sep-Mar">Sep-Mar</option>
+                <option value="Apr-Jun">Apr-Jun</option>
+            </select>
+
+            <label for="Popularity">Popularity</label>
+            <select id="Popularity" name="Popularity" required>
+                <option value="Popular">Popular</option>
+                <option value="A Bit Popular">A Bit Popular</option>
+                <option value="Not Popular">Not Popular</option>
+            </select>
+
+            <button type="button" id="b3" onclick="submitForm()">Get Recommendation</button>
+        </form>
+
+        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
+</section>
+
+
+    <footer class="footer">
+        <div class="social-icons">
+            <div class="icon3">
+                <img src="../static/images/facebook.png" alt="Facebook">
+            </div>
+            <div class="icon3">
+                <img src="../static/images/twitter.png" alt="Twitter">
+            </div>
+            <div class="icon3">
+                <img src="../static/images/google.png" alt="Google">
+            </div>
+            <div class="icon3">
+                <img src="../static/images/linkedin.png" alt="linkedin">
+            </div>
+        </div>
+        <div>
+        <p>&copy; 2024 Your Travel Agency. All rights reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>
+
+
