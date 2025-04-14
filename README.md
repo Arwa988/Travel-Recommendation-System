@@ -13,3 +13,5 @@
 ![Alt text](https://github.com/Arwa988/Travel-Recommendation-System/blob/main/images/login.png)
 - places to visit
 ![Alt text](https://github.com/Arwa988/Travel-Recommendation-System/blob/main/images/web.png)
+- Recommending
+![Alt text](https://github.com/Arwa988/Travel-Recommendation-System/blob/main/images/recommend.png)
