@@ -7,3 +7,6 @@
  - Javascript to make interactivity in the website
  - Flask library to handle the backend section
 ## Output: 
+![Alt text](https://github.com/Arwa988/Road-Accident-analysis-Excel-/blob/main/images/pivot%20tables.png)
+![Alt text](https://github.com/Arwa988/Road-Accident-analysis-Excel-/blob/main/images/pivot%20tables.png)
+![Alt text](https://github.com/Arwa988/Road-Accident-analysis-Excel-/blob/main/images/pivot%20tables.png)
