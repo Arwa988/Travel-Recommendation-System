@@ -7,6 +7,8 @@
  - Javascript to make interactivity in the website
  - Flask library to handle the backend section
 ## Output: 
+- Home
 ![Alt text](https://github.com/Arwa988/Travel-Recommendation-System/blob/main/images/home.png)
-![Alt text](https://github.com/Arwa988/Road-Accident-analysis-Excel-/blob/main/images/pivot%20tables.png)
+- Login
+![Alt text](https://github.com/Arwa988/Travel-Recommendation-System/blob/main/images/login.png)
 ![Alt text](https://github.com/Arwa988/Road-Accident-analysis-Excel-/blob/main/images/pivot%20tables.png)
