@@ -12,4 +12,4 @@
 - Login
 ![Alt text](https://github.com/Arwa988/Travel-Recommendation-System/blob/main/images/login.png)
 - places to visit
-![Alt text](https://github.com/Arwa988/Road-Accident-analysis-Excel-/blob/main/images/pivot%20tables.png)
+![Alt text](https://github.com/Arwa988/Travel-Recommendation-System/blob/main/images/web.png)
